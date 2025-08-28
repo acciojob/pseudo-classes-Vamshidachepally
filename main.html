@@ -1,16 +1,67 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+  <meta charset="UTF-8">
+  <title>CSS Pseudo Classes Implementation</title>
+  <style>
+    /* Set background color using :root */
+    :root {
+      background-color: rgb(135, 206, 235);
+    }
 
+    /* Paragraph styling */
+    article p:first-child {
+      background-color: black;
+      color: white;
+      padding: 10px;
+    }
+
+    article p:nth-child(2) {
+      color: initial;
+      padding: 10px;
+    }
+
+    article p:last-child {
+      color: red;
+      padding: 10px;
+    }
+
+    /* Unordered list styling */
+    ul li {
+      width: 50%;
+      padding: 10px;
+      background-color: gray;
+    }
+
+    ul li:nth-child(odd) {
+      background-color: white;
+    }
+
+    ul li:first-child,
+    ul li:last-child {
+      font-size: 22px;
+    }
+
+    ul li:nth-last-child(3) {
+      background-color: pink;
+    }
+  </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <article>
+    <p>This is the first paragraph (white on black).</p>
+    <p>This is the second paragraph (default styling).</p>
+    <p>This is the third paragraph (red text).</p>
+  </article>
+
+  <ul>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
+    <li>List Item 4</li>
+    <li>List Item 5</li>
+  </ul>
 
 </body>
-
 </html>
